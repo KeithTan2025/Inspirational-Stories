@@ -122,6 +122,16 @@ header h1 {
     background-color: white;
 }
 
+.marker.cultural {
+    background-color: #4361ee;
+    box-shadow: 0 0 15px rgba(67, 97, 238, 0.6);
+}
+
+.marker.cultural.active {
+    box-shadow: 0 0 0 12px rgba(67, 97, 238, 0.3);
+    background-color: white;
+}
+
 .info-panel {
     flex: 1;
     min-width: 300px;

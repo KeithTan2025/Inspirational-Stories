@@ -119,7 +119,87 @@ const places = {
         coord: [25, 26],
         travel: { dist: "28 km", time: "45m" },
         city: true
-    }
+    },
+    18: {
+        name: "Upside Down House (Rumah Terbalik)",
+        description: "The first upside-down house in Southeast Asia. This traditional Sabah-style house is built entirely upside down, including the interior furniture and appliances.",
+        highlights: ["Optical Illusions", "Traditional Architecture", "3D Wonders Museum"],
+        coord: [52, 12],
+        travel: { dist: "8 km", time: "12m" },
+        cultural: true
+    },
+    19: {
+        name: "Borneo Ant House",
+        description: "An underground theme park and museum that focuses on the culture of the local Bajau and Dusun people, as well as unique insect displays.",
+        highlights: ["Underground Galleries", "Bajau Culture", "Canopy Walk"],
+        coord: [48, 10],
+        travel: { dist: "4 km", time: "8m" },
+        cultural: true
+    },
+    20: {
+        name: "Tamparuli Suspension Bridge",
+        description: "An iconic suspension bridge made famous by a local folk song. It spans across the Tuaran River and offers a charming small-town experience.",
+        highlights: ["Historic Bridge", "Small Town Vibes", "Jambatan Tamparuli song history"],
+        coord: [54, 11],
+        travel: { dist: "10 km", time: "15m" },
+        cultural: true
+    },
+    21: {
+        name: "Chanteek Borneo Indigenous Museum",
+        description: "A cultural museum showcasing miniature dioramas and dolls dressed in the traditional costumes of Sabah's 40+ ethnic groups.",
+        highlights: ["Miniature Costumes", "Ethnic Diversity", "Cultural Education"],
+        coord: [53, 13],
+        travel: { dist: "11 km", time: "16m" },
+        cultural: true
+    },
+    22: {
+        name: "Kundasang War Memorial",
+        description: "A beautiful memorial park dedicated to the British and Australian soldiers who died in the Sandakan POW camps during WWII.",
+        highlights: ["Historic Memorial", "Beautiful Gardens", "World War II History"],
+        coord: [95, 22],
+        travel: { dist: "75 km", time: "1h 35m" },
+        cultural: true
+    },
+    23: {
+        name: "Desa Dairy Farm",
+        description: "Often called the 'New Zealand of Sabah,' this high-altitude dairy farm offers stunning views of Mount Kinabalu and fresh dairy products.",
+        highlights: ["Cow Feeding", "Fresh Milk & Gelato", "Mountain Views"],
+        coord: [93, 20],
+        travel: { dist: "73 km", time: "1h 30m" },
+        cultural: true
+    },
+    24: {
+        name: "Monsopiad Cultural Village",
+        description: "A living museum dedicated to the Kadazan-Dusun warrior Monsopiad. It houses the infamous 'House of Skulls.'",
+        highlights: ["House of Skulls", "Kadazan Heritage", "Warrior Demonstrations"],
+        coord: [35, 60],
+        travel: { dist: "45 km", time: "1h 0m" },
+        cultural: true
+    },
+    25: {
+        name: "St. Michael's Church (Penampang)",
+        description: "One of the oldest stone churches in Sabah, built in the early 20th century. It sits on a hill overlooking the Penampang district.",
+        highlights: ["Stone Architecture", "Colonial History", "Peaceful Surroundings"],
+        coord: [33, 45],
+        travel: { dist: "38 km", time: "50m" },
+        cultural: true
+    },
+    26: {
+        name: "Kokol Hill Elf",
+        description: "A commercialized observation area on Kokol Hill with swings, photo-ops, and a café, designed specifically for tourists and photographers.",
+        highlights: ["Giant Swing", "Instagrammable Spots", "Sunset Views"],
+        coord: [43, 28],
+        travel: { dist: "18 km", time: "30m" },
+        cultural: true
+    },
+    27: {
+        name: "Tuaran Town (Local Market)",
+        description: "A bustling local town center famous for its 'Mee Tuaran' (local noodles) and the weekly 'Tamu' (market) where villagers sell fresh produce.",
+        highlights: ["Mee Tuaran", "Local Market (Tamu)", "Nine-Story Pagoda"],
+        coord: [50, 8],
+        travel: { dist: "6 km", time: "10m" },
+        cultural: true
+  }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -133,6 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let className = 'marker';
         if (place.special) className += ' special';
         if (place.city) className += ' city';
+        if (place.cultural) className += ' cultural';
         marker.className = className;
         marker.style.left = `${place.coord[0]}%`;
         marker.style.top = `${place.coord[1]}%`;
